@@ -160,7 +160,7 @@ body#-webkit-web-inspector #console-prompt::before {
 body#-webkit-web-inspector .webkit-line-number {
   background-color: #073642 !important;
   color: #586e75;
-  font-size: 12px !important;
+  font-size: 11px !important;
 }
 body#-webkit-web-inspector .webkit-line-content {
   color: #839496 !important;
@@ -325,7 +325,7 @@ body#-webkit-web-inspector .console-formatted-node {
   color: #b58900 !important;
 }
 body#-webkit-web-inspector .pane > .title {
-  font-size: 12px !important;
+  font-size: 11px !important;
 }
 body#-webkit-web-inspector .pane > .body .info,
 body#-webkit-web-inspector .placard .title {
@@ -421,7 +421,7 @@ body#-webkit-web-inspector #elements-sidebar .child-editing,
 .webkit-line-gutter-backdrop #elements-sidebar .child-editing,
 .webkit-line-gutter-backdrop + table #elements-sidebar .child-editing {
   font-family: 'Source Code Pro', monospace !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
   color: #839496 !important;
 }
 body#-webkit-web-inspector .webkit-html-comment,

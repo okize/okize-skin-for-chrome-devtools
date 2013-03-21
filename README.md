@@ -14,6 +14,9 @@
 
 _This skin expects [Source Code Pro](https://github.com/adobe/Source-Code-Pro) font to be installed_
 
+To compile from less source, install Less globally:
+
+  $ npm install -g less
 
 ### Where to put it ?
 

@@ -26,3 +26,7 @@ $ npm install -g less
 **Ubuntu**: ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css
 
 **Windows**: C:\Users\YourUsername\AppData\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css
+
+---
+
+* https://plus.google.com/115133653231679625609/posts/UZF34wPJXsL

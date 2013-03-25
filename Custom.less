@@ -11,11 +11,13 @@
 // globals
 @panelBackground: #232323;
 @panelBackgroundLight: #CCCCCC;
+@panelBackgroundTextColor: #efefef;
 @selection:    #2b2b2c;
 
 // html
-@html-comment:          #555555;
-@html-tag:              #888888;
+@html-comment:          #666666;
+@html-doctype:          #cc6631;
+@html-tag:              #b8b9ba;
 @html-tag-name:         #FFCC32;
 @html-attribute-name:   #EEC574;
 @html-attribute-value:  #80A635;
@@ -29,25 +31,27 @@
 
 // css
 @css-comment:      #666666;
-@css-keyword:      #DB925F;
-@css-number:       #DB925F;
-@css-property:     #EEC574;
-@css-selector:     #C96666;
-@css-special-rule: #B094BB;
-@css-string:       #B5BC67;
-@css-url:          #EEC574;
-@css-color:        #EEC574;
-@css-line-content: #EEC574;
+@css-line-content: #e3dbd6;
+@css-selector:     #f5bc2d;
+@css-property:     #6d9cbc;
+@css-keyword:      #99cc31;
+@css-bang-keyword: #cc6632;
+@css-number:       #99cc31;
+@css-color:        #99cc31;
+@css-string:       #519f4f;
+@css-at-rule:      #cc6631;
+@css-url:          #35a1d7;
 
 // javascript
 @javascript-comment:        #666666;
-@javascript-ident:          #FFCC32;
-@javascript-keyword:        #CB4B16;
-@javascript-number:         #35A637;
-@javascript-property-name:  #EEC574;
-@javascript-property-value: #80A635;
-@javascript-regexp:         #80A635;
-@javascript-string:         #EFEFEF;
+@javascript-undef:          #35a1d7;
+@javascript-ident:          #6d9cbc;
+@javascript-keyword:        #cc6631;
+@javascript-number:         #99cc31;
+@javascript-string:         #519f4f;
+@javascript-property-name:  #f5bc2d;
+@javascript-property-value: #6d9cbc;
+@javascript-regexp:         #99cc31;
 
 //toolbar
 @toolbar-height: 33px;
@@ -68,8 +72,14 @@ body#-webkit-web-inspector {
     opacity: 1 !important;
   }
 
+  .monospace {
+    font-size: @font-size !important;
+    font-family: @font-family !important;
+  }
+
   #main {
     background-color: @panelBackground !important;
+    /* color: @panelBackgroundTextColor !important; */
     top: @toolbar-height !important;
 
     // Style only the elements, ressources, script and console panels
@@ -84,143 +94,153 @@ body#-webkit-web-inspector {
     }
   }
 
-
-
-
   /**********************************************/
   /* Syntax Highlighting
   /**********************************************/
 
   // HTML
   @-webkit-keyframes fadeOut {
-      0%   { background-color: @panelBackgroundLight }
-      100% { background-color: @panelBackground }
+    0%   { background-color: @panelBackgroundLight }
+    100% { background-color: @panelBackground }
   }
 
   .webkit-highlighted-line.webkit-line-content {
-      -webkit-animation: fadeOut 2s 0s !important;
+    -webkit-animation: fadeOut 2s 0s !important;
   }
 
   .webkit-html-error-message {
-      background-color: @html-error-message-bg !important;
-      color: @html-error-message !important;
+    background-color: @html-error-message-bg !important;
+    color: @html-error-message !important;
   }
 
   .webkit-html-comment {
-      color: @html-comment !important;
+    color: @html-comment !important;
+  }
+
+  .webkit-html-doctype {
+    color: @html-doctype !important;
   }
 
   .webkit-html-tag {
-      color: @html-tag !important;
+    color: @html-tag !important;
   }
 
   .webkit-html-tag-name {
-      color: @html-tag-name !important;
+    color: @html-tag-name !important;
   }
 
   .webkit-html-attribute-name {
-      color: @html-attribute-name !important;
+    color: @html-attribute-name !important;
   }
 
   .webkit-html-attribute-value {
-      color: @html-attribute-value !important;
+    color: @html-attribute-value !important;
   }
 
   .webkit-html-text-node {
-      color: @html-text-node !important;
+    color: @html-text-node !important;
   }
 
   .webkit-html-css-node {
-      color: @html-css-node !important;
+    color: @html-css-node !important;
   }
 
   .webkit-html-js-node {
-      color: @html-js-node !important;
+    color: @html-js-node !important;
   }
 
   .webkit-html-external-link {
-      color: @html-external-link !important;
+    color: @html-external-link !important;
   }
 
   .webkit-html-resource-link {
-      color: @html-resource-link !important;
+    color: @html-resource-link !important;
   }
 
 
   // CSS
   .webkit-css-comment {
-      color: @css-comment !important;
+    color: @css-comment !important;
   }
 
   .webkit-css-selector {
-      color: @css-selector !important;
+    color: @css-selector !important;
   }
 
   .webkit-line-content {
-      color: @css-line-content !important;
+    color: @css-line-content !important;
   }
 
   .webkit-css-property {
-      color: @css-property !important;
+    color: @css-property !important;
   }
 
   .webkit-css-keyword {
-      color: @css-keyword !important;
+    color: @css-keyword !important;
+  }
+
+  .webkit-css-bang-keyword {
+    color: @css-bang-keyword !important;
   }
 
   .webkit-css-number {
-      color: @css-number !important;
+    color: @css-number !important;
   }
 
   .webkit-css-at-rule {
-      color: @css-special-rule !important;
+    color: @css-at-rule !important;
   }
 
   .webkit-css-string {
-      color: @css-string !important;
+    color: @css-string !important;
   }
 
   .webkit-css-url {
-      color: @css-url !important;
+    color: @css-url !important;
   }
 
   .webkit-css-color {
-      color: @css-color !important;
+    color: @css-color !important;
   }
 
 
   // Javascript
+  .webkit-javascript-comment {
+    color: @javascript-comment !important;
+  }
+
   .webkit-javascript-ident {
-      color: @javascript-ident !important;
+    color: @javascript-ident !important;
+  }
+
+  .webkit-javascript-undef {
+    color: @javascript-undef !important;
   }
 
   .webkit-javascript-keyword {
-      color: @javascript-keyword !important;
-  }
-
-  .webkit-javascript-comment {
-      color: @javascript-comment !important;
+    color: @javascript-keyword !important;
   }
 
   .webkit-javascript-string {
-      color: @javascript-string !important;
+    color: @javascript-string !important;
   }
 
   .webkit-javascript-number {
-      color: @javascript-number !important;
+    color: @javascript-number !important;
   }
 
   .webkit-javascript-regexp {
-      color: @javascript-regexp !important;
+    color: @javascript-regexp !important;
   }
 
   .webkit-javascript-property-name {
-      color: @javascript-property-name !important;
+    color: @javascript-property-name !important;
   }
 
   .webkit-javascript-property-value {
-      color: @javascript-property-value !important;
+    color: @javascript-property-value !important;
   }
+
 
 
   /**********************************************/
@@ -275,7 +295,7 @@ body#-webkit-web-inspector {
   }
 
   .console-message {
-    color: #F1F1F1 !important;
+    color: @panelBackgroundTextColor !important;
   }
 
   .console-message, .console-user-command {
@@ -283,7 +303,7 @@ body#-webkit-web-inspector {
   }
 
   .console-formatted-node {
-    color: #efefef !important;
+    color: @panelBackgroundTextColor !important;
   }
 
   .console-user-command > .console-message-text {
@@ -311,7 +331,7 @@ body#-webkit-web-inspector {
   }
 
   .console-group-messages .section .header .title {
-    color: #F1F1F1 !important;
+    color: @panelBackgroundTextColor !important;
   }
 
   .console-group-messages .section .header::before,
@@ -360,24 +380,32 @@ body#-webkit-web-inspector {
   // @todo
   .sidebar-pane-stack {
     background-color: @panelBackground !important;
-    color: #efefef !important;
+    color: @panelBackgroundTextColor !important;
   }
 
   .styles-section .selector-matches {
-    color: #efefef !important;
+    color: @panelBackgroundTextColor !important;
   }
 
   .styles-section {
     background-color: @panelBackground !important;
-    color: #efefef !important;
+    color: @panelBackgroundTextColor !important;
+  }
+
+  .pane > .body .info {
+    color: @panelBackgroundTextColor !important;
   }
 
   .sidebar-pane > .body .info {
-    color: #efefef !important;
+    color: @panelBackgroundTextColor !important;
   }
 
   .sidebar-pane > .body .title {
-    color: #efefef !important;
+    color: @panelBackgroundTextColor !important;
+  }
+
+  .outline-disclosure > ol {
+    color: #b8b9ba !important;
   }
 
 }

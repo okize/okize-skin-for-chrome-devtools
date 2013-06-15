@@ -229,6 +229,11 @@ body#-webkit-web-inspector .console-message-text {
   /* color: @foreground !important; */
 
 }
+body#-webkit-web-inspector .console-formatted-object,
+body#-webkit-web-inspector .console-formatted-node,
+body#-webkit-web-inspector .console-formatted-array {
+  color: #999 !important;
+}
 body#-webkit-web-inspector .console-error-level .console-message-text .title {
   color: #f66 !important;
   -webkit-animation-name: webkit-error-level;
